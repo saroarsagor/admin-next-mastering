@@ -1,0 +1,133 @@
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/common";
+
+.insupport-table {
+  height: 100%;
+  .text-muted {
+    text-transform: capitalize;
+  }
+  .card-title {
+    display: flex;
+    align-items: center;
+  }
+  span.insupport-dot {
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: #dff7e9;
+
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    @include circle;
+    &::before {
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      @include circle;
+      background-color: #28c76f;
+      //   box-shadow: 0 0 0 2px #fff;
+      content: "";
+      @include trans-xy-center;
+      z-index: -1;
+    }
+  }
+  .table {
+    th.issues-th {
+      max-width: 200px;
+    }
+    td.issues-td {
+      max-width: 200px;
+    }
+    td {
+      padding: 10px 0;
+    }
+    th {
+      text-align: left;
+      padding: 10px 0;
+    }
+    td.status {
+      text-align: left;
+    }
+  }
+  .badge {
+    text-transform: capitalize;
+  }
+}
+.insupport-table.card {
+  height: 100%;
+}
+
+.sales-info-table {
+  th.sales-person {
+    min-width: 300px;
+    max-width: 300px;
+  }
+  td.sales-person {
+    min-width: 300px;
+    max-width: 300px;
+  }
+  th.total-sales {
+    min-width: 150px;
+    max-width: 150px;
+  }
+  td.total-sales {
+    min-width: 150px;
+    max-width: 150px;
+    word-wrap: break-word;
+  }
+  td.clients {
+    max-width: 500px;
+    .d-flex {
+      flex-wrap: wrap;
+    }
+    .badge {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  td.software {
+    max-width: 500px;
+    .d-flex {
+      flex-wrap: wrap;
+    }
+    .badge {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.card.popular-product-card {
+  // height: 100%;
+  ul {
+    li {
+      margin-bottom: 13px;
+    }
+    li:last-child() {
+      margin: 0;
+    }
+  }
+}
+
+.support-executive-card {
+  .card {
+    height: 100%;
+  }
+}
+
+
+
+.pl-0-important {
+  padding-left: 0 !important;
+}
+.pr-0-important {
+  padding-right: 0 !important;
+}
+.pt-0-important {
+  padding-top: 0 !important;
+}
+ 
